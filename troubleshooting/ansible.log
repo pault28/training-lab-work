@@ -1,0 +1,174 @@
+2017-10-05 09:29:25,106 p=14158 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:29:25,107 p=14158 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:29:25,113 p=14158 u=student |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/student/troubleshooting/samba.yml': line 8, column 30, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    install_state: installed
+    random_var: This is colon: test
+                             ^ here
+
+2017-10-05 09:30:08,022 p=14340 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:30:08,023 p=14340 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:30:08,028 p=14340 u=student |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/student/troubleshooting/samba.yml': line 8, column 30, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    install_state: installed
+    random_var: This is colon: test
+                             ^ here
+
+2017-10-05 09:31:16,999 p=14613 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:31:17,000 p=14613 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:31:17,006 p=14613 u=student |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/student/troubleshooting/samba.yml': line 43, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+   - name: deliver samba config
+   ^ here
+
+2017-10-05 09:32:33,795 p=14906 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:32:33,796 p=14906 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:32:33,883 p=14906 u=student |  PLAY [Install a samba server] ****************************************************************
+2017-10-05 09:32:33,884 p=14906 u=student |  skipping: no hosts matched
+2017-10-05 09:32:33,884 p=14906 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:33:01,009 p=15011 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:33:01,010 p=15011 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:33:01,062 p=15011 u=student |  playbook: samba.yml
+2017-10-05 09:34:28,470 p=15353 u=student |   [WARNING]: Host file not found: home/student/troubleshooting/inventory
+
+2017-10-05 09:34:28,471 p=15353 u=student |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2017-10-05 09:34:28,558 p=15353 u=student |  PLAY [Install a samba server] ****************************************************************
+2017-10-05 09:34:28,559 p=15353 u=student |  skipping: no hosts matched
+2017-10-05 09:34:28,559 p=15353 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:34:55,677 p=15461 u=student |  PLAY [Install a samba server] ****************************************************************
+2017-10-05 09:34:55,705 p=15461 u=student |  TASK [Gathering Facts] ***********************************************************************
+2017-10-05 09:34:55,873 p=15461 u=student |  fatal: [servera.lab.exammple.com]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname servera.lab.exammple.com: Name or service not known\r\n", "unreachable": true}
+2017-10-05 09:34:55,876 p=15461 u=student |  	to retry, use: --limit @/home/student/troubleshooting/samba.retry
+
+2017-10-05 09:34:55,876 p=15461 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:34:55,876 p=15461 u=student |  servera.lab.exammple.com   : ok=0    changed=0    unreachable=1    failed=0   
+2017-10-05 09:40:20,195 p=16777 u=student |  PLAY [create mail relay servers] *************************************************************
+2017-10-05 09:40:20,223 p=16777 u=student |  TASK [Gathering Facts] ***********************************************************************
+2017-10-05 09:40:20,825 p=16777 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:40:20,827 p=16777 u=student |  TASK [install postfix package] ***************************************************************
+2017-10-05 09:40:21,275 p=16777 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:40:21,278 p=16777 u=student |  TASK [install mail config files] *************************************************************
+2017-10-05 09:40:21,695 p=16777 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:40:21,697 p=16777 u=student |  TASK [check main.cf file] ********************************************************************
+2017-10-05 09:40:21,869 p=16777 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:40:21,871 p=16777 u=student |  TASK [verify main.cf file exists] ************************************************************
+2017-10-05 09:40:21,883 p=16777 u=student |  ok: [servera.lab.example.com] => {
+    "msg": "The main.cf file exists"
+}
+2017-10-05 09:40:21,885 p=16777 u=student |  TASK [start and enable mail services] ********************************************************
+2017-10-05 09:40:22,138 p=16777 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:40:22,140 p=16777 u=student |  TASK [check for always_bcc] ******************************************************************
+2017-10-05 09:40:22,377 p=16777 u=student |  skipping: [servera.lab.example.com]
+2017-10-05 09:40:22,379 p=16777 u=student |  TASK [email notification of always_bcc config] ***********************************************
+2017-10-05 09:40:22,389 p=16777 u=student |  fatal: [servera.lab.example.com]: FAILED! => {"failed": true, "msg": "The conditional check 'bcc_state.stdout != 'always_bcc ='' failed. The error was: error while evaluating conditional (bcc_state.stdout != 'always_bcc ='): 'dict object' has no attribute 'stdout'\n\nThe error appears to have been in '/home/student/troubleshooting/mailrelay.yml': line 42, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: email notification of always_bcc config\n      ^ here\n"}
+2017-10-05 09:40:22,389 p=16777 u=student |  RUNNING HANDLER [restart postfix] ************************************************************
+2017-10-05 09:40:22,390 p=16777 u=student |  	to retry, use: --limit @/home/student/troubleshooting/mailrelay.retry
+
+2017-10-05 09:40:22,390 p=16777 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:40:22,390 p=16777 u=student |  servera.lab.example.com    : ok=6    changed=3    unreachable=0    failed=1   
+2017-10-05 09:41:46,135 p=17160 u=student |  servera.lab.example.com | FAILED | rc=1 >>
+head: cannot open ‘/etc/postfix/main.cf’ for reading: No such file or directory
+
+2017-10-05 09:42:13,944 p=17283 u=student |  PLAY [create mail relay servers] *************************************************************
+2017-10-05 09:42:13,972 p=17283 u=student |  TASK [Gathering Facts] ***********************************************************************
+2017-10-05 09:42:14,369 p=17283 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:42:14,371 p=17283 u=student |  TASK [install postfix package] ***************************************************************
+2017-10-05 09:42:17,318 p=17283 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:42:17,320 p=17283 u=student |  TASK [install mail config files] *************************************************************
+2017-10-05 09:42:18,005 p=17283 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:42:18,007 p=17283 u=student |  TASK [check main.cf file] ********************************************************************
+2017-10-05 09:42:18,187 p=17283 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:42:18,190 p=17283 u=student |  TASK [verify main.cf file exists] ************************************************************
+2017-10-05 09:42:18,201 p=17283 u=student |  ok: [servera.lab.example.com] => {
+    "msg": "The main.cf file exists"
+}
+2017-10-05 09:42:18,203 p=17283 u=student |  TASK [start and enable mail services] ********************************************************
+2017-10-05 09:42:19,617 p=17283 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:42:19,619 p=17283 u=student |  TASK [check for always_bcc] ******************************************************************
+2017-10-05 09:42:19,877 p=17283 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:42:19,879 p=17283 u=student |  TASK [email notification of always_bcc config] ***********************************************
+2017-10-05 09:42:19,888 p=17283 u=student |  skipping: [servera.lab.example.com]
+2017-10-05 09:42:19,889 p=17283 u=student |  RUNNING HANDLER [restart postfix] ************************************************************
+2017-10-05 09:42:20,269 p=17283 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:42:20,271 p=17283 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:42:20,271 p=17283 u=student |  servera.lab.example.com    : ok=8    changed=5    unreachable=0    failed=0   
+2017-10-05 09:42:30,029 p=17428 u=student |  servera.lab.example.com | SUCCESS | rc=0 >>
+# Ansible managed
+#
+# Global Postfix configuration file. This file lists only a subset
+# of all parameters. For the syntax, and for a complete parameter
+# list, see the postconf(5) manual page (command: "man 5 postconf").
+#
+# For common configuration examples, see BASIC_CONFIGURATION_README
+# and STANDARD_CONFIGURATION_README. To find these documents, use
+# the command "postconf html_directory readme_directory", or go to
+# http://www.postfix.org/.
+
+2017-10-05 09:44:48,112 p=17962 u=student |  servera.lab.example.com | SUCCESS | rc=0 >>
+# Ansible managed
+#
+# Global Postfix configuration file. This file lists only a subset
+# of all parameters. For the syntax, and for a complete parameter
+# list, see the postconf(5) manual page (command: "man 5 postconf").
+#
+# For common configuration examples, see BASIC_CONFIGURATION_README
+# and STANDARD_CONFIGURATION_README. To find these documents, use
+# the command "postconf html_directory readme_directory", or go to
+# http://www.postfix.org/.
+
+2017-10-05 09:44:56,111 p=18017 u=student |  PLAY [create mail relay servers] *************************************************************
+2017-10-05 09:44:56,139 p=18017 u=student |  TASK [Gathering Facts] ***********************************************************************
+2017-10-05 09:44:56,553 p=18017 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:44:56,555 p=18017 u=student |  TASK [install postfix package] ***************************************************************
+2017-10-05 09:44:56,977 p=18017 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:44:56,979 p=18017 u=student |  TASK [install mail config files] *************************************************************
+2017-10-05 09:44:57,605 p=18017 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:44:57,607 p=18017 u=student |  TASK [check main.cf file] ********************************************************************
+2017-10-05 09:44:57,789 p=18017 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:44:57,791 p=18017 u=student |  TASK [verify main.cf file exists] ************************************************************
+2017-10-05 09:44:57,803 p=18017 u=student |  ok: [servera.lab.example.com] => {
+    "msg": "The main.cf file exists"
+}
+2017-10-05 09:44:57,805 p=18017 u=student |  TASK [start and enable mail services] ********************************************************
+2017-10-05 09:44:58,059 p=18017 u=student |  ok: [servera.lab.example.com]
+2017-10-05 09:44:58,061 p=18017 u=student |  TASK [check for always_bcc] ******************************************************************
+2017-10-05 09:44:58,305 p=18017 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:44:58,307 p=18017 u=student |  TASK [email notification of always_bcc config] ***********************************************
+2017-10-05 09:44:58,315 p=18017 u=student |  skipping: [servera.lab.example.com]
+2017-10-05 09:44:58,317 p=18017 u=student |  TASK [postfix firewalld config] **************************************************************
+2017-10-05 09:44:58,755 p=18017 u=student |  changed: [servera.lab.example.com]
+2017-10-05 09:44:58,756 p=18017 u=student |  PLAY RECAP ***********************************************************************************
+2017-10-05 09:44:58,756 p=18017 u=student |  servera.lab.example.com    : ok=8    changed=2    unreachable=0    failed=0   
+2017-10-05 09:45:34,598 p=18235 u=student |  servera.lab.example.com | SUCCESS | rc=0 >>
+dhcpv6-client ssh smtp
+

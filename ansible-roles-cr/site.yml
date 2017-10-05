@@ -1,0 +1,5 @@
+# playbook for FTP
+- include: ftpclient.yml
+
+# play for FTP servers
+- include: vsftpd-configure.yml

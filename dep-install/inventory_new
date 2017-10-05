@@ -1,0 +1,15 @@
+servera.lab.example.com
+192.168.i.100
+
+[web]
+servera.lab.example.com
+serverb.lab.example.com
+
+[samba]
+servera.lab.example.com
+serverc.lab.example.com
+
+[all_servers:children]
+web
+samba
+

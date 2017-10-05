@@ -1,0 +1,11 @@
+- hosts: 127.0.0.1
+  connection: local
+
+  tasks:
+  - name: test local module inclusion
+    yum:
+      name: httpd
+      state: present
+    register: my_value
+
+  - debug: var=my_value

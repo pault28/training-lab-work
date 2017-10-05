@@ -1,0 +1,7 @@
+---
+# handlers for my role
+
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted

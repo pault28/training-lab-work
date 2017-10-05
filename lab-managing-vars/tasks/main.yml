@@ -1,0 +1,17 @@
+---
+  - name: Install and start the db
+    yum:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      # - "{{ansible_local.custom.packages}}"
+      - ["{{ansible_local.custom.packages.db_package}}", "{{ ansible_local.custom.packages.web_package }}"]
+  - name: Start service
+    service:
+      name: "{{item}}"
+      state: started
+      enabled: true
+    with_items:
+      - ["{{ansible_local.custom.services.db_service}}", "{{ansible_local.custom.services.web_service }}"]
+
+
